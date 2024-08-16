@@ -17,7 +17,6 @@ const upload = multer({ storage: storage });
 
 const router = express.Router();
 
-// Phục vụ tệp tin từ thư mục upload/images
 router.use('/images', express.static(path.join(__dirname, '../upload/images')));
 
 router.get('/load/:filename', (req, res) => {
@@ -30,7 +29,6 @@ router.get('/load/:filename', (req, res) => {
   });
 });
 
-// Endpoint để tải lên tệp tin
 router.post('/upload', upload.single('files'), (req, res) => {
   if (!req.file) {
     return res.status(400).json({

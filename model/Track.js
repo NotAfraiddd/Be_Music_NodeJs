@@ -7,12 +7,12 @@ const trackSchema = new mongoose.Schema(
     id: { type: Number, require: true },
     title: { type: String, required: true },
     singer: { type: String, required: true },
-    album: { type: String, default: null },
-    cover_image: { type: String, default: null },
+    album: { type: String, default: "" },
+    cover_image: { type: String, default: "" },
     mp3_file: { type: String, required: true },
-    category: { type: String, default: null },
-    release_year: { type: Date, default: null },
-    duration: { type: Number,default: null },
+    category: { type: String, default: "" },
+    release_year: { type: Date, default: "" },
+    duration: { type: Number,default: "" },
   },
   {
     timestamps: true

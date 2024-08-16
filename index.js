@@ -27,6 +27,7 @@ app.use('/api/playlist-track', playlistTrackRouter)
 app.use('/api/image', imageUploadRouter)
 app.use('/api/audio', audioUploadRouter)
 app.use('/images', express.static('upload/images'))
+app.use('/audios', express.static('upload/audios'))
 
 // connect server
 app.listen(port, (error) => {
