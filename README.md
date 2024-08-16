@@ -1,6 +1,6 @@
 ## 
 
-### Copy .env
+### Create file .env
 ```
 cp .env.example .env
 ```
